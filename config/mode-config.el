@@ -1,5 +1,5 @@
 ;; mode-config.el - contains requires and mode settings
-;; Last modified : Tue, 3 April 2012 11:47:43 EDT
+;; Last modified : Sun, 9 September 2012 18:58:50 EDT
 
 ;; Color theme
 (require 'color-theme-wombat)
@@ -71,7 +71,7 @@
 (require 'magit)
 
 ;; Doxygen support
-(require 'doxymacs)
+;;(require 'doxymacs)
 
 ;; Column fill settings for text mode
 (add-hook 'text-mode-hook
@@ -125,9 +125,9 @@
     (turn-on-auto-fill)
     (setq comment-auto-fill-only-comments t)
     (font-lock-add-keywords nil
-          '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))
-    (doxymacs-mode t)
-    (doxymacs-font-lock)))
+          '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
+  ;;  (doxymacs-mode t)
+  ;;  (doxymacs-font-lock)))
 
 (add-hook 'find-file-hook 'prog-mode-settings)
 
